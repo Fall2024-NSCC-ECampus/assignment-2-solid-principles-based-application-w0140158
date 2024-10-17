@@ -26,20 +26,24 @@ This project is built using the following technologies:
 ## Setup Instructions
 1. **Clone the application:**
    ```bash
-   git clone https://github.com/yourusername/OnlineCourierService.git
+   git clone https://github.com/Fall2024-NSCC-ECampus/assignment-2-solid-principles-based-application-w0140158.git
+   
 Create a MySQL database:
 sql
-Copy code
+
 CREATE DATABASE online_courier_service;
 Run the SQL script: Execute the SQL script located at src/main/resources/online_courier_service.sql to set up the database structure.
 Update database credentials: Open src/main/resources/application.properties and modify the spring.datasource.username and spring.datasource.password properties to match your MySQL installation.
 Run the application:
-bash
-Copy code
+
+
+
 mvn spring-boot:run
 The app will start running at http://localhost:8080.
+
 API Endpoints
 Courier Service
+
 GET /api/courier
 Welcome message and available endpoints information.
 
