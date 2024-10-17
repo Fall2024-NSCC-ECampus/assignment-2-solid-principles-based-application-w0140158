@@ -98,34 +98,36 @@ Deletes a product by ID.
 Sample Requests
 Sign Up
 json
-Copy code
 {
-    "firstName": "Leanne",
-    "lastName": "Graham",
-    "username": "leanne",
-    "password": "password",
-    "email": "leanne.graham@gmail.com"
+    "firstName": "Max",
+    "lastName": "Power",
+    "username": "maxpower",
+    "password": "supersecurepassword",
+    "email": "max.power@powersolutions.com"
 }
+
+
 Log In
 json
-Copy code
+
 {
-    "usernameOrEmail": "leanne",
-    "password": "password"
+    "usernameOrEmail": "maxpower",
+    "password": "supersecurepassword"
 }
+
 Create Order
 json
-Copy code
+
 {
-    "product": "Sample Product",
-    "deliveryAddress": "123 Sample St, Sample City"
+    "product": "Power Drill 3000",
+    "deliveryAddress": "42 Electric Ave, Dynamo City"
 }
+
 Add Product
 json
-Copy code
+
 {
-    "name": "Sample Product",
-    "price": 19.99
+    "name": "Power Drill 3000",
+    "price": 149.99
 }
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+
