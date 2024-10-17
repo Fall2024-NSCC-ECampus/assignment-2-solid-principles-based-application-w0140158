@@ -1,1 +1,131 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/YfvsP8Zh)
+# Online Courier Service API
+
+Welcome to the **Online Courier Service API**! This RESTful API allows you to manage products, orders, delivery details, and hub rates effectively.
+
+## Table of Contents
+- [Technologies](#technologies)
+- [Setup Instructions](#setup-instructions)
+- [API Endpoints](#api-endpoints)
+  - [Courier Service](#courier-service)
+  - [Delivery Details](#delivery-details)
+  - [Hub Rates](#hub-rates)
+  - [Orders](#orders)
+  - [Products](#products)
+- [Sample Requests](#sample-requests)
+- [License](#license)
+
+## Technologies
+This project is built using the following technologies:
+- Spring Boot
+- MySQL
+- Spring Security
+- JWT
+- JPA
+- Hibernate
+
+## Setup Instructions
+1. **Clone the application:**
+   ```bash
+   git clone https://github.com/yourusername/OnlineCourierService.git
+Create a MySQL database:
+sql
+Copy code
+CREATE DATABASE online_courier_service;
+Run the SQL script: Execute the SQL script located at src/main/resources/online_courier_service.sql to set up the database structure.
+Update database credentials: Open src/main/resources/application.properties and modify the spring.datasource.username and spring.datasource.password properties to match your MySQL installation.
+Run the application:
+bash
+Copy code
+mvn spring-boot:run
+The app will start running at http://localhost:8080.
+API Endpoints
+Courier Service
+GET /api/courier
+Welcome message and available endpoints information.
+
+GET /api/courier/info
+Lists all available API endpoints.
+
+GET /api/courier/health
+Checks if the API is up and running.
+
+Delivery Details
+GET /api/courier/deliverydetails
+Retrieves all delivery details.
+
+POST /api/courier/deliverydetails
+Adds new delivery details.
+
+DELETE /api/courier/deliverydetails/{trackingId}
+Deletes delivery details by tracking ID.
+
+Hub Rates
+GET /api/hubrates
+Retrieves all hub rates.
+
+GET /api/hubrates/{location}
+Retrieves hub rate by location.
+
+POST /api/hubrates
+Adds a new hub rate.
+
+Orders
+POST /api/courier/orders
+Places a new order.
+
+GET /api/courier/orders
+Retrieves all orders.
+
+PUT /api/courier/orders/{id}
+Updates an existing order.
+
+DELETE /api/courier/orders/{orderId}
+Deletes an order by ID.
+
+Products
+GET /api/courier/products
+Retrieves all products.
+
+POST /api/courier/products
+Adds a new product.
+
+PUT /api/courier/products/{productId}
+Updates an existing product.
+
+DELETE /api/courier/products/{productId}
+Deletes a product by ID.
+
+Sample Requests
+Sign Up
+json
+Copy code
+{
+    "firstName": "Leanne",
+    "lastName": "Graham",
+    "username": "leanne",
+    "password": "password",
+    "email": "leanne.graham@gmail.com"
+}
+Log In
+json
+Copy code
+{
+    "usernameOrEmail": "leanne",
+    "password": "password"
+}
+Create Order
+json
+Copy code
+{
+    "product": "Sample Product",
+    "deliveryAddress": "123 Sample St, Sample City"
+}
+Add Product
+json
+Copy code
+{
+    "name": "Sample Product",
+    "price": 19.99
+}
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
